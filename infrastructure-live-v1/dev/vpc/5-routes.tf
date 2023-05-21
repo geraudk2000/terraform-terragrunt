@@ -32,15 +32,15 @@ resource "aws_route_table_association" "private_us_east1a" {
 
 resource "aws_route_table_association" "private_us_east1b" {
   subnet_id      = aws_subnet.private_us_east1b.id
-  route_table_id = aws_subnet.private_us_east1b.id
+  route_table_id = aws_route_table.private.id
 }
 
 resource "aws_route_table_association" "public_us_east1a" {
   subnet_id      = aws_subnet.public_us_east1a.id
-  route_table_id = aws_subnet.public_us_east1b.id
+  route_table_id = aws_route_table.public.id
 }
 
 resource "aws_route_table_association" "public_us_east1b" {
   subnet_id      = aws_subnet.public_us_east1b.id
-  route_table_id = aws_subnet.public_us_east1b.id
+  route_table_id = aws_route_table.public.id
 }
