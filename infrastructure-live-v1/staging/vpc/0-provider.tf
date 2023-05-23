@@ -1,10 +1,6 @@
-# Configure the AWS Provider
 provider "aws" {
   region = "us-east-1"
-  alias = "dev"
-
-  access_key = var.dev_aws_key
-  secret_key = var.dev_aws_secret
+  alias = "PROD"
 
 }
 

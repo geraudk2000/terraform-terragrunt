@@ -7,7 +7,7 @@ resource "aws_route_table" "private" {
   }
 
   tags = {
-    Name = "dev-private"
+    Name = "staging-private"
   }
 
 }
@@ -21,7 +21,7 @@ resource "aws_route_table" "public" {
   }
 
   tags = {
-    Name = "dev-public"
+    Name = "staging-public"
   }
 }
 

@@ -4,9 +4,9 @@ resource "aws_subnet" "private_us_east1a" {
   availability_zone = "us-east-1a"
 
   tags = {
-    "Name"                            = "dev-private-us-east-1a"
+    "Name"                            = "staging-private-us-east-1a"
     "Kubernetes.io/role/internal-elb" = "1"
-    "kubernetes.io/cluster/dev-demo"  = "owned"
+    "kubernetes.io/cluster/staging-demo"  = "owned"
   }
 }
 
@@ -16,9 +16,9 @@ resource "aws_subnet" "private_us_east1b" {
   availability_zone = "us-east-1b"
 
   tags = {
-    "Name"                            = "dev-private-us-east-1b"
+    "Name"                            = "staging-private-us-east-1b"
     "Kubernetes.io/role/internal-elb" = "1"
-    "kubernetes.io/cluster/dev-demo"  = "owned"
+    "kubernetes.io/cluster/staging-demo"  = "owned"
   }
 }
 
@@ -29,9 +29,9 @@ resource "aws_subnet" "public_us_east1a" {
   map_public_ip_on_launch = true
 
   tags = {
-    "Name"                           = "dev-public-us-east-1a"
+    "Name"                           = "staging-public-us-east-1a"
     "Kubernetes.io/role/elb"         = "1"
-    "kubernetes.io/cluster/dev-demo" = "owned"
+    "kubernetes.io/cluster/staging-demo" = "owned"
   }
 }
 
@@ -42,8 +42,8 @@ resource "aws_subnet" "public_us_east1b" {
   map_public_ip_on_launch = true
 
   tags = {
-    "Name"                           = "dev-public-us-east-1b"
+    "Name"                           = "staging-public-us-east-1b"
     "Kubernetes.io/role/elb"         = "1"
-    "kubernetes.io/cluster/dev-demo" = "owned"
+    "kubernetes.io/cluster/staging-demo" = "owned"
   }
 }
